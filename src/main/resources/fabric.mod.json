@@ -16,7 +16,7 @@
   "license": "CC0-1.0",
   "icon": "assets/rubetaessentials/icon.png",
 
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
     "main": [
       "kz.chesschicken.rubetaessentials.ExampleMod"
