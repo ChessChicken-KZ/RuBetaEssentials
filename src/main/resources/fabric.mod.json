@@ -19,7 +19,7 @@
   "environment": "client",
   "entrypoints": {
     "main": [
-      "kz.chesschicken.rubetaessentials.ExampleMod"
+      "kz.chesschicken.rubetaessentials.InitClass"
     ]
   },
   "mixins": [

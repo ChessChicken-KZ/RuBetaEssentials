@@ -1,6 +1,6 @@
 package kz.chesschicken.rubetaessentials.mixin;
 
-import kz.chesschicken.rubetaessentials.ExampleMod;
+import kz.chesschicken.rubetaessentials.InitClass;
 import kz.chesschicken.rubetaessentials.Packet253Ping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.ClientPlayNetworkHandler;
@@ -32,7 +32,7 @@ public abstract class MixinClientHandler extends PacketHandler {
     private void checkPing(SendChatMessageC2S packet, CallbackInfo ci)
     {
         if(packet instanceof Packet253Ping)
-            ExampleMod.handlePing(packet);
+            InitClass.handlePing(packet);
 
     }
 }

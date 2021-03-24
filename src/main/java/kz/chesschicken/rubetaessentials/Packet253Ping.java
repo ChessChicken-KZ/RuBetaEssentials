@@ -33,7 +33,7 @@ public class Packet253Ping extends SendChatMessageC2S {
 
     @Override
     public void handle(PacketHandler handler) {
-        ExampleMod.handlePing(this);
+        InitClass.handlePing(this);
     }
 
     @Override

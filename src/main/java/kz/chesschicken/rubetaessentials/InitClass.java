@@ -6,7 +6,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.packet.play.SendChatMessageC2S;
 
 
-public class ExampleMod implements ModInitializer {
+public class InitClass implements ModInitializer {
 	public static long ping;
 	@Override
 	public void onInitialize() {
@@ -14,7 +14,7 @@ public class ExampleMod implements ModInitializer {
 	}
 
 	public static void handlePing(SendChatMessageC2S packet253ping) {
-		ExampleMod.ping = System.currentTimeMillis() - ((Packet253Ping)packet253ping).clientTime;
+		InitClass.ping = System.currentTimeMillis() - ((Packet253Ping)packet253ping).clientTime;
 		((Packet253Ping)packet253ping).clientTime = System.currentTimeMillis();
 		((Minecraft) FabricLoader.getInstance().getGameInstance()).getNetworkHandler().sendPacket(packet253ping);
 	}

@@ -1,6 +1,6 @@
 package kz.chesschicken.rubetaessentials.mixin;
 
-import kz.chesschicken.rubetaessentials.ExampleMod;
+import kz.chesschicken.rubetaessentials.InitClass;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.InGame;
 import org.spongepowered.asm.mixin.Mixin;
@@ -19,7 +19,7 @@ public class MixinInGame {
         if(!minecraft.options.debugHud && !minecraft.options.hideHud)
         {
             minecraft.textRenderer.drawText("Minecraft Beta 1.7.3", 2, 2, 14737632);
-            minecraft.textRenderer.drawText("Ping: " + ExampleMod.ping, 115, 2, 14737632);
+            minecraft.textRenderer.drawText("Ping: " + InitClass.ping, 115, 2, 14737632);
         }
     }
 
