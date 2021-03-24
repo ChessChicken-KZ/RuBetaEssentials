@@ -1,10 +1,14 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.glasslauncher.example.mixin",
+  "package": "kz.chesschicken.rubetaessentials.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "ExampleMixin"
+    "MixinAbstractPacket",
+    "MixinCharacterUtils",
+    "MixinClientHandler",
+    "MixinInGame",
+    "MixinMinecraft"
   ],
   "server": [
   ],

@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "rubetaessentials",
   "version": "${version}",
 
-  "name": "Example Mod",
+  "name": "RuBeta Essentials",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
     "Me!"
   ],
   "contact": {
-    "homepage": "https://glass-launcher.net/",
-    "sources": "https://github.com/calmilamsy/BIN-fabric-example-mod"
+    "homepage": "https://rubeta.net/",
+    "sources": "https://github.com/ChessChicken-KZ/RuBetaEssentials"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/rubetaessentials/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.glasslauncher.example.ExampleMod"
+      "kz.chesschicken.rubetaessentials.ExampleMod"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "rubetaessentials.mixins.json"
   ],
 
   "depends": {
