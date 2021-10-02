@@ -20,6 +20,6 @@ public abstract class MixinAbstractClientPlayer extends PlayerBase {
     private void injectLoadNewSkin1(Minecraft minecraft, Level level, Session session, int dimensionId, CallbackInfo ci) {
         if (session != null && session.username != null && session.username.length() > 0)
             this.skinUrl = "http://assets.rubeta.net/skins/" + session.username + ".png";
-        this.skinUrl = "https://raw.githubusercontent.com/ChessChicken-KZ/AstolfoMod/master/src/main/resources/assets/astolfomod/stationapi/textures/astolfo_maid.png";
+        //this.skinUrl = "https://raw.githubusercontent.com/ChessChicken-KZ/AstolfoMod/master/src/main/resources/assets/astolfomod/stationapi/textures/astolfo_maid.png";
     }
 }
