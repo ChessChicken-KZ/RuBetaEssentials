@@ -68,14 +68,14 @@ public abstract class MixinLog extends BlockBase implements CustomWorldRender, C
             ((AccessorBlockRenderer)renderer).set_southFaceRotation(1);
             ((AccessorBlockRenderer)renderer).set_northFaceRotation(1);
         }
-        boolean var7 = renderer.renderStandardBlock(blockBase, x, y, z);
+        boolean r = renderer.renderStandardBlock(blockBase, x, y, z);
         ((AccessorBlockRenderer)renderer).set_eastFaceRotation(0);
         ((AccessorBlockRenderer)renderer).set_westFaceRotation(0);
         ((AccessorBlockRenderer)renderer).set_topFaceRotation(0);
         ((AccessorBlockRenderer)renderer).set_bottomFaceRotation(0);
         ((AccessorBlockRenderer)renderer).set_southFaceRotation(0);
         ((AccessorBlockRenderer)renderer).set_northFaceRotation(0);
-        return var7;
+        return r;
     }
 
     @Override

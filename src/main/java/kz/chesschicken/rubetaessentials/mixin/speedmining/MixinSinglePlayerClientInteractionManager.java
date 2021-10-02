@@ -1,5 +1,6 @@
 package kz.chesschicken.rubetaessentials.mixin.speedmining;
 
+import kz.chesschicken.rubetaessentials.ConfigClass;
 import net.minecraft.client.SinglePlayerClientInteractionManager;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
@@ -14,6 +15,6 @@ public class MixinSinglePlayerClientInteractionManager {
             opcode = Opcodes.PUTFIELD
     ))
     private void redirectToZero2(SinglePlayerClientInteractionManager long_name, int value) {
-        ((AccessorSinglePlayerClientInteractionManager)long_name).set_hitDelay(0);
+        ((AccessorSinglePlayerClientInteractionManager)long_name).set_hitDelay(ConfigClass.EnumConfigBooleans.FAST_BLOCK_MINING_FIX.getValue() ? 0 : value);
     }
 }

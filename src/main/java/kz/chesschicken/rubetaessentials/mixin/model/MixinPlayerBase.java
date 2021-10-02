@@ -1,6 +1,6 @@
 package kz.chesschicken.rubetaessentials.mixin.model;
 
-import kz.chesschicken.rubetaessentials.ISkinProperties;
+import kz.chesschicken.rubetaessentials.utils.ISkinProperties;
 import net.minecraft.entity.Living;
 import net.minecraft.entity.player.PlayerBase;
 import net.minecraft.level.Level;

@@ -1,4 +1,4 @@
-package kz.chesschicken.rubetaessentials;
+package kz.chesschicken.rubetaessentials.utils;
 
 import net.minecraft.entity.EntityBase;
 

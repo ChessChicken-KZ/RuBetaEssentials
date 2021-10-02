@@ -1,5 +1,6 @@
 package kz.chesschicken.rubetaessentials.mixin.toolfix;
 
+import kz.chesschicken.rubetaessentials.ConfigClass;
 import net.minecraft.block.BlockBase;
 import net.minecraft.item.tool.Hatchet;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,14 +16,15 @@ public class MixinHatchet {
     @SuppressWarnings("UnresolvedMixinReference")
     @Inject(method = "<clinit>", at = @At("TAIL"))
     private static void setOther(CallbackInfo ci) {
-        effectiveBlocks = new BlockBase[] {
-                BlockBase.STONE_SLAB,
-                BlockBase.WOOD,
-                BlockBase.BOOKSHELF,
-                BlockBase.LOG,
-                BlockBase.CHEST,
-                BlockBase.WOOD_STAIRS,
-                BlockBase.FENCE
+        if(ConfigClass.EnumConfigBooleans.STAIRS_MINING_FIX.getValue())
+            effectiveBlocks = new BlockBase[] {
+                    BlockBase.STONE_SLAB,
+                    BlockBase.WOOD,
+                    BlockBase.BOOKSHELF,
+                    BlockBase.LOG,
+                    BlockBase.CHEST,
+                    BlockBase.WOOD_STAIRS,
+                    BlockBase.FENCE
         };
     }
 }

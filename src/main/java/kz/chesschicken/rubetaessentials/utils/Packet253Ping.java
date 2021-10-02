@@ -1,5 +1,6 @@
-package kz.chesschicken.rubetaessentials;
+package kz.chesschicken.rubetaessentials.utils;
 
+import kz.chesschicken.rubetaessentials.InitClass;
 import lombok.SneakyThrows;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.packet.play.ChatMessage0x3Packet;

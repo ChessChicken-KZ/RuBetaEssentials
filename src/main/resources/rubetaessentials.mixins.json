@@ -7,6 +7,7 @@
     "MixinCharacterUtils",
     "MixinInGame",
     "MixinMinecraft",
+    "MixinPause",
     "MixinRecipeRegistry",
     "MixinThreadDownloadResources",
     "block.AccessorBlockRenderer",

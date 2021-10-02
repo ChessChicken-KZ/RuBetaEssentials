@@ -1,7 +1,8 @@
 package kz.chesschicken.rubetaessentials.mixin.network;
 
+import kz.chesschicken.rubetaessentials.ConfigClass;
 import kz.chesschicken.rubetaessentials.InitClass;
-import kz.chesschicken.rubetaessentials.Packet253Ping;
+import kz.chesschicken.rubetaessentials.utils.Packet253Ping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.ClientPlayNetworkHandler;
 import net.minecraft.network.PacketHandler;
@@ -23,8 +24,10 @@ public abstract class MixinClientHandler extends PacketHandler {
     private void handlePingInfo(ChatMessage0x3Packet packet, CallbackInfo ci)
     {
         if(packet.message.contains("§4§2§6§8")) {
-            sendPacket(new ChatMessage0x3Packet(minecraft.session.sessionId));
-            sendPacket(new Packet253Ping(0L, System.currentTimeMillis()));
+            if(ConfigClass.EnumConfigBooleans.AUTO_LOGIN_CLIENT.getValue())
+                sendPacket(new ChatMessage0x3Packet(minecraft.session.sessionId));
+            if(ConfigClass.EnumConfigBooleans.PING_SERVER_CLIENT.getValue())
+                sendPacket(new Packet253Ping(0L, System.currentTimeMillis()));
         }
     }
 
@@ -33,6 +36,5 @@ public abstract class MixinClientHandler extends PacketHandler {
     {
         if(packet instanceof Packet253Ping)
             InitClass.handlePing(packet);
-
     }
 }

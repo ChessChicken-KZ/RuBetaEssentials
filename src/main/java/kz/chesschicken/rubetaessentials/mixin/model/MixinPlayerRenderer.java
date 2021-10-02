@@ -1,9 +1,9 @@
 package kz.chesschicken.rubetaessentials.mixin.model;
 
-import kz.chesschicken.rubetaessentials.IPRAdditional;
-import kz.chesschicken.rubetaessentials.ISkinProperties;
 import kz.chesschicken.rubetaessentials.model.ModelPlayer;
 import kz.chesschicken.rubetaessentials.model.ModelPlayerAlex;
+import kz.chesschicken.rubetaessentials.utils.IPRAdditional;
+import kz.chesschicken.rubetaessentials.utils.ISkinProperties;
 import net.minecraft.client.render.entity.LivingEntityRenderer;
 import net.minecraft.client.render.entity.PlayerRenderer;
 import net.minecraft.client.render.entity.model.Biped;

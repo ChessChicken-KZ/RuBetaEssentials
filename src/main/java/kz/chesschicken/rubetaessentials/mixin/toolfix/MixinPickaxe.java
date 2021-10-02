@@ -1,5 +1,6 @@
 package kz.chesschicken.rubetaessentials.mixin.toolfix;
 
+import kz.chesschicken.rubetaessentials.ConfigClass;
 import net.minecraft.block.BlockBase;
 import net.minecraft.item.tool.Pickaxe;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,25 +16,26 @@ public class MixinPickaxe {
     @SuppressWarnings("UnresolvedMixinReference")
     @Inject(method = "<clinit>", at = @At("TAIL"))
     private static void setOther(CallbackInfo ci) {
-        effectiveBlocks = new BlockBase[] {
-                BlockBase.COBBLESTONE_STAIRS,
-                BlockBase.COBBLESTONE,
-                BlockBase.DOUBLE_STONE_SLAB,
-                BlockBase.STONE_SLAB,
-                BlockBase.STONE,
-                BlockBase.SANDSTONE,
-                BlockBase.MOSSY_COBBLESTONE,
-                BlockBase.IRON_ORE,
-                BlockBase.IRON_BLOCK,
-                BlockBase.COAL_ORE,
-                BlockBase.GOLD_BLOCK,
-                BlockBase.GOLD_ORE,
-                BlockBase.DIAMOND_ORE,
-                BlockBase.DIAMOND_BLOCK,
-                BlockBase.ICE,
-                BlockBase.NETHERRACK,
-                BlockBase.LAPIS_LAZULI_ORE,
-                BlockBase.LAPIS_LAZULI_BLOCK
+        if(ConfigClass.EnumConfigBooleans.STAIRS_MINING_FIX.getValue())
+            effectiveBlocks = new BlockBase[] {
+                    BlockBase.COBBLESTONE_STAIRS,
+                    BlockBase.COBBLESTONE,
+                    BlockBase.DOUBLE_STONE_SLAB,
+                    BlockBase.STONE_SLAB,
+                    BlockBase.STONE,
+                    BlockBase.SANDSTONE,
+                    BlockBase.MOSSY_COBBLESTONE,
+                    BlockBase.IRON_ORE,
+                    BlockBase.IRON_BLOCK,
+                    BlockBase.COAL_ORE,
+                    BlockBase.GOLD_BLOCK,
+                    BlockBase.GOLD_ORE,
+                    BlockBase.DIAMOND_ORE,
+                    BlockBase.DIAMOND_BLOCK,
+                    BlockBase.ICE,
+                    BlockBase.NETHERRACK,
+                    BlockBase.LAPIS_LAZULI_ORE,
+                    BlockBase.LAPIS_LAZULI_BLOCK
         };
     }
 }
