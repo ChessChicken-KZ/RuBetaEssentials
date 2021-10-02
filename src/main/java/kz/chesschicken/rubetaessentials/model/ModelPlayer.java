@@ -1,6 +1,6 @@
 package kz.chesschicken.rubetaessentials.model;
 
-import kz.chesschicken.rubetaessentials.CuboidScalable;
+import kz.chesschicken.rubetaessentials.utils.CuboidScalable;
 import net.minecraft.client.model.Cuboid;
 import net.minecraft.client.render.entity.model.Biped;
 import org.lwjgl.opengl.GL11;
@@ -10,9 +10,9 @@ public class ModelPlayer extends Biped {
         this(f, 0.0F);
     }
 
-    public ModelPlayer(float f, float f1){
-        field_629 = false;
+    public ModelPlayer(float f, float f1) {
         field_628 = false;
+        field_629 = false;
         field_630 = false;
         field_627 = new CuboidScalable(0, 0, 64, 64);
         field_627.method_1818(-5F, 0.0F, -1F, 10, 16, 1, f);
@@ -56,8 +56,7 @@ public class ModelPlayer extends Biped {
         field_624.setRotationPoint(-2F, 12F + f1, 0.0F);
     }
 
-    @Override
-    public void render(float f, float f1, float f2, float f3, float f4, float f5){
+    public void render(float f, float f1, float f2, float f3, float f4, float f5) {
         super.render(f, f1, f2, f3, f4, f5);
         GL11.glPushMatrix();
         field_178734_a.method_1815(f5);
@@ -68,7 +67,6 @@ public class ModelPlayer extends Biped {
         GL11.glPopMatrix();
     }
 
-    @Override
     public void setAngles(float f, float f1, float f2, float f3, float f4, float f5){
         super.setAngles(f, f1, f2, f3, f4, f5);
         applyRotations_Angles(this.field_625, this.field_178733_c);
@@ -78,24 +76,23 @@ public class ModelPlayer extends Biped {
         applyRotations_Angles(this.field_621, this.field_178730_v);
     }
 
-    public static void applyRotations_Angles(Cuboid CuboidScalable, Cuboid CuboidScalable1)
-    {
-        CuboidScalable1.pitch = CuboidScalable.pitch;
-        CuboidScalable1.yaw = CuboidScalable.yaw;
-        CuboidScalable1.roll = CuboidScalable.roll;
-        CuboidScalable1.rotationPointX = CuboidScalable.rotationPointX;
-        CuboidScalable1.rotationPointY = CuboidScalable.rotationPointY;
-        CuboidScalable1.rotationPointZ = CuboidScalable.rotationPointZ;
+    public static void applyRotations_Angles(Cuboid f, Cuboid s) {
+        s.pitch = f.pitch;
+        s.yaw = f.yaw;
+        s.roll = f.roll;
+        s.rotationPointX = f.rotationPointX;
+        s.rotationPointY = f.rotationPointY;
+        s.rotationPointZ = f.rotationPointZ;
     }
 
-    @Override
     public void method_606(float f) {
         this.field_627.method_1815(f);
     }
 
-    public CuboidScalable field_178734_a;
-    public CuboidScalable field_178732_b;
-    public CuboidScalable field_178733_c;
-    public CuboidScalable field_178731_d;
-    public CuboidScalable field_178730_v;
+    public Cuboid field_178734_a;
+    public Cuboid field_178732_b;
+    public Cuboid field_178733_c;
+    public Cuboid field_178731_d;
+    public Cuboid field_178730_v;
+
 }

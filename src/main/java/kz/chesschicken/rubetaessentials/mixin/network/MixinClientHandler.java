@@ -1,4 +1,4 @@
-package kz.chesschicken.rubetaessentials.mixin;
+package kz.chesschicken.rubetaessentials.mixin.network;
 
 import kz.chesschicken.rubetaessentials.InitClass;
 import kz.chesschicken.rubetaessentials.Packet253Ping;

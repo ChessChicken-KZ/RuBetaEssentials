@@ -20,5 +20,6 @@ public class MixinBiped {
             field_620.rotationPointY = 1.0F;
         else
             field_620.rotationPointY = 0.0F;
+
     }
 }

@@ -22,6 +22,6 @@ public class MixinMinecraft {
             shift = At.Shift.AFTER
     ))
     private void injectUseRussification(CallbackInfo ci) {
-        this.textRenderer = new TextRenderer(this.options, "/assets/rubetaessentials/russian.png", this.textureManager);
+        this.textRenderer = new TextRenderer(this.options, "/assets/rubetaessentials/textures/russian.png", this.textureManager);
     }
 }
