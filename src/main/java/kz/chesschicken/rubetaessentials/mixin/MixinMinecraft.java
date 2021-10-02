@@ -21,9 +21,7 @@ public class MixinMinecraft {
             target = "Lnet/minecraft/client/Minecraft;textRenderer:Lnet/minecraft/client/render/TextRenderer;",
             shift = At.Shift.AFTER
     ))
-    private void russ(CallbackInfo ci)
-    {
-
+    private void injectUseRussification(CallbackInfo ci) {
         this.textRenderer = new TextRenderer(this.options, "/assets/rubetaessentials/russian.png", this.textureManager);
     }
 }

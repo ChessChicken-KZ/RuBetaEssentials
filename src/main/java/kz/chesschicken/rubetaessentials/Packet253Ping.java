@@ -2,12 +2,12 @@ package kz.chesschicken.rubetaessentials;
 
 import lombok.SneakyThrows;
 import net.minecraft.network.PacketHandler;
-import net.minecraft.packet.play.SendChatMessageC2S;
+import net.minecraft.packet.play.ChatMessage0x3Packet;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 
-public class Packet253Ping extends SendChatMessageC2S {
+public class Packet253Ping extends ChatMessage0x3Packet {
     public long serverTime = -1L, clientTime = -1L;
 
     public Packet253Ping() {}
@@ -32,7 +32,7 @@ public class Packet253Ping extends SendChatMessageC2S {
     }
 
     @Override
-    public void handle(PacketHandler handler) {
+    public void apply(PacketHandler handler) {
         InitClass.handlePing(this);
     }
 

@@ -10,18 +10,15 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(AbstractPacket.class)
 public abstract class MixinAbstractPacket {
-    private static boolean sw = false;
+
     @Shadow
     static void register(int id, boolean flag, boolean flag1, Class arg) {
     }
 
-    @Inject(method = "<init>", at = @At("TAIL"))
-    private void register(CallbackInfo ci)
-    {
-        if(!sw)
-        {
-            register(253, true ,true, Packet253Ping.class);
-            sw = true;
-        }
+    @SuppressWarnings("UnresolvedMixinReference")
+    @Inject(method = "<clinit>", at = @At("TAIL"))
+    private static void register(CallbackInfo ci) {
+       register(253, true ,true, Packet253Ping.class);
     }
+
 }

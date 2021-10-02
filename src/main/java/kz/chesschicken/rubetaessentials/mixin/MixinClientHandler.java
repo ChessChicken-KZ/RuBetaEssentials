@@ -6,7 +6,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.network.ClientPlayNetworkHandler;
 import net.minecraft.network.PacketHandler;
 import net.minecraft.packet.AbstractPacket;
-import net.minecraft.packet.play.SendChatMessageC2S;
+import net.minecraft.packet.play.ChatMessage0x3Packet;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -19,17 +19,17 @@ public abstract class MixinClientHandler extends PacketHandler {
 
     @Shadow private Minecraft minecraft;
 
-    @Inject(method = "handleChatMessage", at = @At("TAIL"))
-    private void handlePingInfo(SendChatMessageC2S packet, CallbackInfo ci)
+    @Inject(method = "onChatMessage", at = @At("TAIL"))
+    private void handlePingInfo(ChatMessage0x3Packet packet, CallbackInfo ci)
     {
         if(packet.message.contains("§4§2§6§8")) {
-            sendPacket(new SendChatMessageC2S(minecraft.session.sessionId));
+            sendPacket(new ChatMessage0x3Packet(minecraft.session.sessionId));
             sendPacket(new Packet253Ping(0L, System.currentTimeMillis()));
         }
     }
 
-    @Inject(method = "handleChatMessage", at = @At("HEAD"))
-    private void checkPing(SendChatMessageC2S packet, CallbackInfo ci)
+    @Inject(method = "onChatMessage", at = @At("HEAD"))
+    private void checkPing(ChatMessage0x3Packet packet, CallbackInfo ci)
     {
         if(packet instanceof Packet253Ping)
             InitClass.handlePing(packet);
