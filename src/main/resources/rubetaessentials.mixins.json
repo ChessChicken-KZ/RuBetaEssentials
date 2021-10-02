@@ -9,7 +9,12 @@
     "MixinClientHandler",
     "MixinInGame",
     "MixinMinecraft",
-    "MixinThreadDownloadResources"
+    "MixinThreadDownloadResources",
+    "model.MixinBiped",
+    "model.MixinTexturedQuad",
+    "skin.MixinAbstractClientPlayer",
+    "skin.MixinPlayerBase",
+    "skin.MixinRemoteClientPlayer"
   ],
   "server": [
   ],

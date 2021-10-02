@@ -10,6 +10,7 @@ import java.io.DataOutputStream;
 public class Packet253Ping extends ChatMessage0x3Packet {
     public long serverTime = -1L, clientTime = -1L;
 
+    @SuppressWarnings("unused")
     public Packet253Ping() {}
 
     public Packet253Ping(long serverTime, long clientTime) {
