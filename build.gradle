@@ -83,6 +83,10 @@ dependencies {
 	compile 'org.jetbrains:annotations:16.0.2'
 
 	modImplementation "com.github.minecraft-cursed-legacy:cursed-fabric-loader:${project.loader_version}"
+
+	/* ModMenu */
+	modImplementation "com.github.calmilamsy:ModMenu:03023e1"
+
 }
 
 processResources {
