@@ -4,16 +4,16 @@
   "version": "${version}",
 
   "name": "RuBeta Essentials",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Some patches to play nicely in RuBeta Official!",
   "authors": [
-    "Me!"
+    "ChessChicken-KZ"
   ],
   "contact": {
     "homepage": "https://rubeta.net/",
     "sources": "https://github.com/ChessChicken-KZ/RuBetaEssentials"
   },
 
-  "license": "CC0-1.0",
+  "license": "MIT",
   "icon": "assets/rubetaessentials/icon.png",
 
   "environment": "client",
