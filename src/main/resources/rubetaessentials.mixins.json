@@ -7,10 +7,12 @@
     "MixinCharacterUtils",
     "MixinInGame",
     "MixinMinecraft",
+    "MixinRecipeRegistry",
     "MixinThreadDownloadResources",
     "block.AccessorBlockRenderer",
     "block.MixinBlockRenderer",
     "block.instances.MixinLog",
+    "block.instances.MixinStoneSlab",
     "model.AccessorCuboid",
     "model.MixinBiped",
     "model.Mixinclass_556",
@@ -24,8 +26,12 @@
     "skin.MixinImageProcessorImpl",
     "skin.MixinPlayerBase",
     "skin.MixinRemoteClientPlayer",
-    "speedfix.MixinHatchet",
-    "speedfix.MixinPickaxe"
+    "speedmining.AccessorMultiPlayerClientInteractionManager",
+    "speedmining.AccessorSinglePlayerClientInteractionManager",
+    "speedmining.MixinMultiPlayerClientInteractionManager",
+    "speedmining.MixinSinglePlayerClientInteractionManager",
+    "toolfix.MixinHatchet",
+    "toolfix.MixinPickaxe"
   ],
   "server": [
   ],

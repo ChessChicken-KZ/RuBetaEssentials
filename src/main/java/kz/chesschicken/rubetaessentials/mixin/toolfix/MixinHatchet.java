@@ -1,4 +1,4 @@
-package kz.chesschicken.rubetaessentials.mixin.speedfix;
+package kz.chesschicken.rubetaessentials.mixin.toolfix;
 
 import net.minecraft.block.BlockBase;
 import net.minecraft.item.tool.Hatchet;
