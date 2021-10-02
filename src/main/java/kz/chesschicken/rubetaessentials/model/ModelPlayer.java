@@ -33,12 +33,14 @@ public class ModelPlayer extends Biped {
         field_178730_v = new CuboidScalable(16, 32, 64, 64);
         field_178730_v.method_1818(-4.0F, 0.0F, -2.0F, 8, 12, 4, f + 0.25F);
         field_178730_v.setRotationPoint(0.0F, 0.0F, 0.0F);
+
         field_623 = new CuboidScalable(32, 48, 64, 64);
         field_623.method_1818(-1.0F, -2.0F, -2.0F, 4, 12, 4, f);
         field_623.setRotationPoint(5.0F, 2.0F, 0.0F);
         field_625 = new CuboidScalable(16, 48, 64, 64);
         field_625.method_1818(-2.0F, 0.0F, -2.0F, 4, 12, 4, f);
         field_625.setRotationPoint(1.9F, 12.0F, 0.0F);
+
         field_619 = new CuboidScalable(0, 0, 64, 64);
         field_619.method_1818(-4F, -8F, -4F, 8, 8, 8, f);
         field_619.setRotationPoint(0.0F, 0.0F + f1, 0.0F);

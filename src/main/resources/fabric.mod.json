@@ -9,8 +9,9 @@
     "ChessChicken-KZ"
   ],
   "contact": {
-    "homepage": "https://rubeta.net/",
-    "sources": "https://github.com/ChessChicken-KZ/RuBetaEssentials"
+    "homepage": "https://chesschicken-kz.github.io/",
+    "sources": "https://github.com/ChessChicken-KZ/RuBetaEssentials",
+    "issues": "https://github.com/ChessChicken-KZ/RuBetaEssentials/issues"
   },
 
   "license": "MIT",
