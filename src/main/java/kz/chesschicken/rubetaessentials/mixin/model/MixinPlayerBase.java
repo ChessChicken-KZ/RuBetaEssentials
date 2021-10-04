@@ -17,7 +17,7 @@ public abstract class MixinPlayerBase extends Living implements ISkinProperties 
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void injectSetChar(Level arg, CallbackInfo ci) {
-        this.texture = "/assets/rubetaessentials/textures/char.png";
+        this.texture = "/assets/rubetaessentials/textures/mob/char.png";
     }
 
     @Override

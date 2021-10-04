@@ -3,3 +3,4 @@ options.click_fix=Click Mining Fix
 
 options.ping_server=Server Ping
 options.auto_login=Auto-Login
+options.inv_buttons=Inventory Buttons

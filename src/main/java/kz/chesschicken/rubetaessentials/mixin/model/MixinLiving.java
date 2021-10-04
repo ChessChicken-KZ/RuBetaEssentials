@@ -14,6 +14,6 @@ public class MixinLiving {
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void initCharForLiving(Level arg, CallbackInfo ci) {
-        this.texture = "/assets/rubetaessentials/textures/char.png";
+        this.texture = "/assets/rubetaessentials/textures/mob/char.png";
     }
 }

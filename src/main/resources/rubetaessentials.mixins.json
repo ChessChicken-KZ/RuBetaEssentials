@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "MixinCharacterUtils",
+    "MixinPlayerInventory",
     "MixinInGame",
     "MixinMinecraft",
     "MixinPause",

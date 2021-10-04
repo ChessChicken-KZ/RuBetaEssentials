@@ -10,7 +10,10 @@ public class ConfigClass extends ConfigInstance {
         FAST_BLOCK_MINING_FIX("click_fix","fixes", true, false),
 
         PING_SERVER_CLIENT("ping_server","client", true, true),
-        AUTO_LOGIN_CLIENT("auto_login","client", true, false);
+        AUTO_LOGIN_CLIENT("auto_login","client", true, false),
+
+        INVENTORY_BUTTONS("inv_buttons", "client", true, false);
+
         private boolean value;
         private final boolean requires;
         private final String name;
