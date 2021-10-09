@@ -2,6 +2,7 @@ package kz.chesschicken.rubetaessentials.utils;
 
 import net.minecraft.client.render.QuadPoint;
 import net.minecraft.client.render.TexturedQuad;
+
 public class TexturedQuadScalable extends TexturedQuad {
     public TexturedQuadScalable(QuadPoint[] args, int i, int j, int k, int i1, int x, int y) {
         super(args);

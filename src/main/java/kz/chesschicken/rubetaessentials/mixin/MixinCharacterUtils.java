@@ -13,6 +13,7 @@ import java.nio.charset.StandardCharsets;
 @Mixin(CharacterUtils.class)
 public class MixinCharacterUtils {
 
+    @SuppressWarnings("all")
     @SneakyThrows
     @ModifyVariable(method = "getValidCharacters", at = @At("STORE"), ordinal = 0)
     private static BufferedReader injectReturnRusFont(BufferedReader bufferedReader) {

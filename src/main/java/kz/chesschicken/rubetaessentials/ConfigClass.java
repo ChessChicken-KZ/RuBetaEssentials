@@ -50,26 +50,18 @@ public class ConfigClass extends ConfigInstance {
         super("rubetaessentials");
     }
 
-    private void create(EnumConfigBooleans configBooleans) {
-        instance.getGroup(configBooleans.getGroup()).add(Property.createProperty(configBooleans.getName(), configBooleans.getValue()));
-    }
-
-    private void set(EnumConfigBooleans configBooleans) {
-        configBooleans.setValue((boolean) getValue(configBooleans.getGroup(), configBooleans.getName()));
-    }
-
     @Override
     public void saveConfig() {
         instance.add(Group.createGroup("fixes"));
         instance.add(Group.createGroup("client"));
 
         for(EnumConfigBooleans booleans : EnumConfigBooleans.values())
-            create(booleans);
+            instance.getGroup(booleans.getGroup()).add(Property.createProperty(booleans.getName(), booleans.getValue()));
     }
 
     @Override
     public void applyConfig() {
         for(EnumConfigBooleans booleans : EnumConfigBooleans.values())
-            set(booleans);
+            booleans.setValue((boolean) getValue(booleans.getGroup(), booleans.getName()));
     }
 }

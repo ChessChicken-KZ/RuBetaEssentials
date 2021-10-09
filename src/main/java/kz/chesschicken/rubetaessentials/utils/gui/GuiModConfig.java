@@ -68,7 +68,7 @@ public class GuiModConfig extends ScreenBase {
         this.renderBackground();
         this.drawTextWithShadowCentred(this.textManager, "RuBeta Essentials Config", this.width / 2, 20, 16777215);
         if(showWarning && minecraft.level != null && minecraft.level.isClient)
-            this.drawTextWithShadowCentred(this.textManager, "PLEASE RECONNECT TO APPLY CHANGES!", this.width / 2, 16, new Color(255, 70, 70).getRGB());
+            this.drawTextWithShadowCentred(this.textManager, "PLEASE RECONNECT TO APPLY CHANGES!", this.width / 2, 12, new Color(219, 7, 7).getRGB());
 
         super.render(mouseX, mouseY, delta);
     }
