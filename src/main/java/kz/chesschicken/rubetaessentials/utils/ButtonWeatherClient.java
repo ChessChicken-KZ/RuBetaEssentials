@@ -4,7 +4,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.widgets.Button;
 import org.lwjgl.opengl.GL11;
 
-public class ButtonInventory extends Button {
+public class ButtonWeatherClient extends Button {
     public static final String[] commands = new String[] {
             "/ptime reset", //Reset
             "/pweather reset", //Reset
@@ -17,7 +17,7 @@ public class ButtonInventory extends Button {
     private final int imageX;
     private final int imageY;
 
-    public ButtonInventory(int id, int x, int y, int i, int j) {
+    public ButtonWeatherClient(int id, int x, int y, int i, int j) {
         super(id, x, y, 20, 20, "");
         this.imageX = i;
         this.imageY = j;

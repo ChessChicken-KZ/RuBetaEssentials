@@ -12,7 +12,9 @@ public class ConfigClass extends ConfigInstance {
         PING_SERVER_CLIENT("ping_server","client", true, true),
         AUTO_LOGIN_CLIENT("auto_login","client", true, false),
 
-        INVENTORY_BUTTONS("inv_buttons", "client", true, false);
+        INVENTORY_BUTTONS("inv_buttons", "client", true, false),
+
+        DYNAMIC_DYNMAP("dynamic_dynmap", "client", false, false);
 
         private boolean value;
         private final boolean requires;
