@@ -1,4 +1,4 @@
-package kz.chesschicken.rubetaessentials.utils;
+package kz.chesschicken.rubetaessentials.utils.gui;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.widgets.Button;

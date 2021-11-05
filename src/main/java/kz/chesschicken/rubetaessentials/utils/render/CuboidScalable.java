@@ -1,4 +1,4 @@
-package kz.chesschicken.rubetaessentials.utils;
+package kz.chesschicken.rubetaessentials.utils.render;
 
 import kz.chesschicken.rubetaessentials.mixin.model.AccessorCuboid;
 import net.minecraft.client.model.Cuboid;

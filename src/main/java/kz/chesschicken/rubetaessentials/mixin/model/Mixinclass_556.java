@@ -1,6 +1,6 @@
 package kz.chesschicken.rubetaessentials.mixin.model;
 
-import kz.chesschicken.rubetaessentials.utils.IPRAdditional;
+import kz.chesschicken.rubetaessentials.utils.render.IPRAdditional;
 import net.minecraft.class_556;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.render.entity.PlayerRenderer;

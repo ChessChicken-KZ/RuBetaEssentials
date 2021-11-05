@@ -1,18 +1,15 @@
 package kz.chesschicken.rubetaessentials.mixin.skin;
 
 import net.minecraft.client.ImageProcessorImpl;
-import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
-import java.awt.image.ImageObserver;
 
 @Mixin(ImageProcessorImpl.class)
 public abstract class MixinImageProcessorImpl {

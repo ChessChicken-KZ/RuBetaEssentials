@@ -1,4 +1,4 @@
-package kz.chesschicken.rubetaessentials.utils;
+package kz.chesschicken.rubetaessentials.utils.render;
 
 import net.minecraft.client.render.QuadPoint;
 import net.minecraft.client.render.TexturedQuad;

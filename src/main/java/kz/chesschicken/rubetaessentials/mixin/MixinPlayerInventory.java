@@ -1,7 +1,7 @@
 package kz.chesschicken.rubetaessentials.mixin;
 
 import kz.chesschicken.rubetaessentials.ConfigClass;
-import kz.chesschicken.rubetaessentials.utils.ButtonWeatherClient;
+import kz.chesschicken.rubetaessentials.utils.gui.ButtonWeatherClient;
 import net.minecraft.client.gui.screen.container.ContainerBase;
 import net.minecraft.client.gui.screen.container.PlayerInventory;
 import net.minecraft.client.gui.widgets.Button;

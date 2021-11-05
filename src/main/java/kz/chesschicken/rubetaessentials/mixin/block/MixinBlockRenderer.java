@@ -1,7 +1,7 @@
 package kz.chesschicken.rubetaessentials.mixin.block;
 
-import kz.chesschicken.rubetaessentials.utils.CustomInventoryRendering;
-import kz.chesschicken.rubetaessentials.utils.CustomWorldRender;
+import kz.chesschicken.rubetaessentials.utils.render.CustomInventoryRendering;
+import kz.chesschicken.rubetaessentials.utils.render.CustomWorldRender;
 import net.minecraft.block.BlockBase;
 import net.minecraft.client.render.block.BlockRenderer;
 import net.minecraft.level.BlockView;

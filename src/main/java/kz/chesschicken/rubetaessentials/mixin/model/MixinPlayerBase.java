@@ -5,9 +5,14 @@ import net.minecraft.entity.Living;
 import net.minecraft.entity.player.PlayerBase;
 import net.minecraft.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import javax.imageio.ImageIO;
+import java.io.IOException;
+import java.net.URL;
 
 @Mixin(PlayerBase.class)
 public abstract class MixinPlayerBase extends Living implements ISkinProperties {
@@ -22,6 +27,19 @@ public abstract class MixinPlayerBase extends Living implements ISkinProperties 
 
     @Override
     public boolean isAlex() {
-        return true;
+        if(status == 0)
+            checkSkin();
+
+        return status == 2;
+    }
+
+    @Unique byte status = 0;
+
+    @Unique void checkSkin() {
+        try {
+            status = (byte) (ImageIO.read(new URL(this.texture)).getHeight() == 64 ? 2 : 1);
+        } catch (IOException e) {
+            status = 1;
+        }
     }
 }

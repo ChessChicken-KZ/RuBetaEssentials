@@ -1,8 +1,8 @@
 package kz.chesschicken.rubetaessentials.mixin.block.instances;
 
 import kz.chesschicken.rubetaessentials.mixin.block.AccessorBlockRenderer;
-import kz.chesschicken.rubetaessentials.utils.CustomInventoryRendering;
-import kz.chesschicken.rubetaessentials.utils.CustomWorldRender;
+import kz.chesschicken.rubetaessentials.utils.render.CustomInventoryRendering;
+import kz.chesschicken.rubetaessentials.utils.render.CustomWorldRender;
 import net.minecraft.block.BlockBase;
 import net.minecraft.block.Log;
 import net.minecraft.block.material.Material;

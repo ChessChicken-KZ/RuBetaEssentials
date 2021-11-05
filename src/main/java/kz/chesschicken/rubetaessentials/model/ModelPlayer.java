@@ -1,6 +1,6 @@
 package kz.chesschicken.rubetaessentials.model;
 
-import kz.chesschicken.rubetaessentials.utils.CuboidScalable;
+import kz.chesschicken.rubetaessentials.utils.render.CuboidScalable;
 import net.minecraft.client.model.Cuboid;
 import net.minecraft.client.render.entity.model.Biped;
 import org.lwjgl.opengl.GL11;

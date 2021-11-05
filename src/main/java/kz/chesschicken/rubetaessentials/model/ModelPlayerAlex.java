@@ -1,6 +1,6 @@
 package kz.chesschicken.rubetaessentials.model;
 
-import kz.chesschicken.rubetaessentials.utils.CuboidScalable;
+import kz.chesschicken.rubetaessentials.utils.render.CuboidScalable;
 
 public class ModelPlayerAlex extends ModelPlayer {
 
