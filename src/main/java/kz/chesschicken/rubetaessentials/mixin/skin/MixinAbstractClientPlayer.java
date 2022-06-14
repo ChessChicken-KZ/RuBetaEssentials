@@ -1,6 +1,7 @@
 package kz.chesschicken.rubetaessentials.mixin.skin;
 
 import kz.chesschicken.rubetaessentials.ConfigClass;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.util.Session;
 import net.minecraft.entity.player.AbstractClientPlayer;
@@ -24,7 +25,11 @@ public abstract class MixinAbstractClientPlayer extends PlayerBase {
     private void injectLoadNewSkin1(Minecraft minecraft, Level level, Session session, int dimensionId, CallbackInfo ci) {
         if (session != null && session.username != null && session.username.length() > 0)
             this.skinUrl = "http://assets.rubeta.net/skins/" + session.username + ".png";
-        //this.skinUrl = "https://raw.githubusercontent.com/ChessChicken-KZ/AstolfoMod/master/src/main/resources/assets/astolfomod/stationapi/textures/astolfo_maid.png";
+    }
+
+    @Inject(method = "sendChatMessage", at = @At("HEAD"))
+    private void debug1(String par1, CallbackInfo ci) {
+        ((Minecraft)FabricLoader.getInstance().getGameInstance()).overlay.addChatMessage("Debug: " + par1);
     }
 
     @Unique

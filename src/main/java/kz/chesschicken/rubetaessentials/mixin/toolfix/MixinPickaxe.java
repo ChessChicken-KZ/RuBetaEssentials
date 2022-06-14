@@ -13,7 +13,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class MixinPickaxe {
     @Shadow private static BlockBase[] effectiveBlocks;
 
-    @SuppressWarnings("UnresolvedMixinReference")
     @Inject(method = "<clinit>", at = @At("TAIL"))
     private static void setOther(CallbackInfo ci) {
         if(ConfigClass.EnumConfigBooleans.STAIRS_MINING_FIX.getValue())

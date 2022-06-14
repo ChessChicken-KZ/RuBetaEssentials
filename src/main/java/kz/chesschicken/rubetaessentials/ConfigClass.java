@@ -3,6 +3,10 @@ package kz.chesschicken.rubetaessentials;
 import kz.chesschicken.rubetaessentials.utils.configapi.ConfigInstance;
 import kz.chesschicken.rubetaessentials.utils.configapi.instance.Group;
 import kz.chesschicken.rubetaessentials.utils.configapi.instance.Property;
+import net.minecraft.client.Minecraft;
+
+import java.util.function.BiFunction;
+import java.util.function.Function;
 
 public class ConfigClass extends ConfigInstance {
     public enum EnumConfigBooleans {
@@ -20,11 +24,21 @@ public class ConfigClass extends ConfigInstance {
         private final boolean requires;
         private final String name;
         private final String group;
+        private final Function<Minecraft, Boolean> apply;
         EnumConfigBooleans(String s, String s1, boolean b, boolean r) {
             this.name = s;
             this.group = s1;
             this.value = b;
             this.requires = r;
+            this.apply = null;
+        }
+
+        EnumConfigBooleans(String s, String s1, boolean b, boolean r, Function<Minecraft, Boolean> f) {
+            this.name = s;
+            this.group = s1;
+            this.value = b;
+            this.requires = r;
+            this.apply = f;
         }
 
         public void setValue(boolean b) {
@@ -45,6 +59,12 @@ public class ConfigClass extends ConfigInstance {
 
         public boolean requiresReconnect() {
             return this.requires;
+        }
+
+        public boolean applyUpdate(Minecraft mc) {
+            if(this.apply != null)
+                return this.apply.apply(mc);
+            return false;
         }
     }
 

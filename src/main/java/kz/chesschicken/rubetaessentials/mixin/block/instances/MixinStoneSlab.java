@@ -24,7 +24,6 @@ public abstract class MixinStoneSlab {
         }
     }
 
-    @SuppressWarnings("UnresolvedMixinReference")
     @Inject(method = "<clinit>", at = @At("TAIL"))
     private static void injectAndManipulateArray(CallbackInfo ci) {
         field_2323 = new String[] {

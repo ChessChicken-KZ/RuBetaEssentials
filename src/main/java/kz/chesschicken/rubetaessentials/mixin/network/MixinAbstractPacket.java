@@ -15,7 +15,6 @@ public abstract class MixinAbstractPacket {
     static void register(int id, boolean flag, boolean flag1, Class arg) {
     }
 
-    @SuppressWarnings("UnresolvedMixinReference")
     @Inject(method = "<clinit>", at = @At("TAIL"))
     private static void register(CallbackInfo ci) {
        register(253, true ,true, Packet253Ping.class);
